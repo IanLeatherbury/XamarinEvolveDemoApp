@@ -21,4 +21,4 @@ Enable the final customer renderer in PlatformEnhancements.cs to add an existing
 * [assembly: ExportRenderer (typeof(LoadingView), typeof(LoadingViewRenderer))]
 * Be sure to set the shouldBeautify bool to true to see the custom loading view come up.
 
-Special thanks to the Xamarin.Forms team for putting this code together!
+*Note: I did not write this code. Special thanks to the Xamarin team for putting this together!*
