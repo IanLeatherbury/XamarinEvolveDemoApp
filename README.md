@@ -6,7 +6,7 @@ Extending Xamarin.Forms on iOS
 This is a demo app showing how to extend Xamarin.Forms. It has three main ideas.
 
 ## **1. Do what you can with Xamarin.Forms**
-Enable the beautify functions in SessionCell.cs and SessionPage.cs to exhaust the possible options with Xamarin.Forms
+Enable the Beautify() functions in SessionCell.cs and SessionPage.cs to exhaust the possible options with Xamarin.Forms
 
 ## **2. Modify existing controls**
 Enable the first 5 custom renderers in the PlatformEnhancements.cs page to modify some custom iOS controls. These are:
@@ -21,3 +21,4 @@ Enable the final customer renderer in PlatformEnhancements.cs to add an existing
 * [assembly: ExportRenderer (typeof(LoadingView), typeof(LoadingViewRenderer))]
 * Be sure to set the shouldBeautify bool to true to see the custom loading view come up.
 
+Special thanks to the Xamarin.Forms team for putting this code together!
