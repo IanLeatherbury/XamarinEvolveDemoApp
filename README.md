@@ -19,5 +19,5 @@ Enable the first 5 custom renderers in the PlatformEnhancements.cs page to modif
 ## **3. Add an existing Xamarin.iOS view**
 Enable the final customer renderer in PlatformEnhancements.cs to add an existing Xamarin.iOS loading view to your app.
 * [assembly: ExportRenderer (typeof(LoadingView), typeof(LoadingViewRenderer))]
-Be sure to set the shouldBeautify bool to true to see the custom loading view come up.
+* Be sure to set the shouldBeautify bool to true to see the custom loading view come up.
 
