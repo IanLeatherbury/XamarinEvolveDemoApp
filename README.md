@@ -3,7 +3,7 @@ XamarinEvolveDemoApp
 
 Extending Xamarin.Forms on iOS
 
-This is a demo app showing how to extend Xamarin.Forms. It has three main ideas.
+This is a demo app showing how to extend Xamarin.Forms. It has four main ideas.
 
 ## **1. Do what you can with Xamarin.Forms**
 Enable the Beautify() functions in SessionCell.cs and SessionPage.cs to exhaust the possible options with Xamarin.Forms
@@ -20,5 +20,27 @@ Enable the first 5 custom renderers in the PlatformEnhancements.cs page to modif
 Enable the final customer renderer in PlatformEnhancements.cs to add an existing Xamarin.iOS loading view to your app.
 * [assembly: ExportRenderer (typeof(LoadingView), typeof(LoadingViewRenderer))]
 * Be sure to set the shouldBeautify bool to true to see the custom loading view come up.
+* 
+
+## **4. The pattern**
+This is the example given in LoadingViewRenderer:
+
+```csharp
+if (Control == null)
+  SetNativeControl (new CustomLoadingView ());
+				
+if (e.OldElement != null)
+{
+  // unsubscribe
+  // that may mean you’re doing something like…
+  e.OldElement.ChildAdded -= OldElementOnChildAdded;
+}
+
+Then check that the new element !- null then subscribe.
+if( e.NewElement != null) {
+  //subscribe
+  e.NewElement.ChildAdded += OldElementOChildAdded;
+}
+```
 
 *Note: I did not write this code. Special thanks to the Xamarin team for putting this together!*
